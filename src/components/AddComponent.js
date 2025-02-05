@@ -4,10 +4,9 @@ export default function AddComponent({ updtDataTodos }) {
 
     const [inputValue1, setInputValue] = useState("");
     const [inputValue2, setInput2Value] = useState("");
-    let id=0;
 
     function updtData(inputValue1, inputValue2) {
-        const data = {id:uuidv4(), nom: inputValue1, desc: inputValue2, done: true}
+        const data = {id:uuidv4(), nom: inputValue1, desc: inputValue2, done: false}
         // updatingValue({ nom: inputValue1, desc: inputValue2 });
         updtDataTodos((prevTodos) => [...prevTodos, data]);
         console.log()
